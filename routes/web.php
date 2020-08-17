@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 Route::view('/', 'home');
-Route::view('mahasiswa', 'mahasiswa');
+Route::get('mahasiswa', 'Mahasiswa@index');
