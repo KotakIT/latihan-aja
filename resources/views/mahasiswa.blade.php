@@ -5,6 +5,7 @@
 @section('content')
     <div class="container">
         <h2 class="mt-5">Data mahasiswa</h2>
+        <a href="/mahasiswa/tambah" class="btn btn-primary my-3">Tambah Mahasiswa</a>
         <table class="table table-striped">
         <tr>
             <th>NIM</th>
