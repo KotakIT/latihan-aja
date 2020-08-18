@@ -12,3 +12,5 @@ Route::post('mahasiswa/tambah', 'Mahasiswa@store');
 Route::get('mahasiswa/edit/{id}', "Mahasiswa@edit");
 Route::redirect('mahasiswa/edit', "/mahasiswa");
 Route::post('mahasiswa/edit', "Mahasiswa@update");
+
+Route::get('mahasiswa/hapus/{id}', "Mahasiswa@hapus");
