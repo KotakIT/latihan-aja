@@ -29,4 +29,20 @@ class Mahasiswa extends Controller
 
         return redirect("/mahasiswa");
     }
+
+    public function edit($id)
+    {
+        $mahasiswa = DB::table('mahasiswa')->where('nim', $id)->get();
+        return view('edit',['mahasiswa' => $mahasiswa]);
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('mahasiswa')->where('nim', $request->nim)->update([
+            'nama_lengkap' => $request->input("nama_lengkap"),
+            'kota' => $request->input("kota")
+        ]);
+
+        return redirect('/mahasiswa');
+    }
 }
