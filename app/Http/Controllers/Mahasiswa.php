@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Alert;
 
 class Mahasiswa extends Controller
 {
@@ -42,7 +43,7 @@ class Mahasiswa extends Controller
             'nama_lengkap' => $request->input("nama_lengkap"),
             'kota' => $request->input("kota")
         ]);
-
+        Alert::success('Berhasil', "Data dengan NIM $request->nim berhasil diubah");
         return redirect('/mahasiswa');
     }
 
